@@ -1,0 +1,48 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.nav-bar{
+    display: flex;
+    margin-top: 5px;
+}
+
+.button-class{
+    height: 35px;
+    width: 5%;
+    /* border: 1px solid blue; */
+    margin-left: 10px;
+}
+
+.button-class button{
+    height: 35px;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    font-size: 27px;
+    color: blue;
+    cursor: pointer;
+}
+
+.image-class{
+    height: 35px;
+    width: 10%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+ hr{
+     margin-top: 4px;
+ }
+
+ .input-field{
+     width: 30%;
+     margin: auto;
+     margin-top: 20px;
+     
+ }
+
+ .images-com{
+     height: 30px;
+ }
