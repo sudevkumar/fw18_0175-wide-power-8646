@@ -1,8 +1,8 @@
-import "./navbarForSignLog.css"
+import "./navbarForSignLog.css";
 
 export default function NavbarForsignLog() {
   return (
-    
+    <>
       <div className="nav-bar">
         <div className="button-class">
           <button>←</button>
@@ -15,7 +15,7 @@ export default function NavbarForsignLog() {
           />
         </div>
       </div>
-    //   <hr />
-    
+      <hr />
+    </>
   );
 }

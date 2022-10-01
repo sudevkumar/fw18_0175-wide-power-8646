@@ -1,40 +1,23 @@
-import "./Signin.css";
-import { Heading, Input, Stack, Checkbox, Text, Wrap } from "@chakra-ui/react";
+import { Checkbox, Heading, Input, Stack, Text, Wrap } from "@chakra-ui/react";
+import { useState } from "react";
+
 import NavbarForsignLog from "./NavbarForsignLog";
 
-import React, { useState } from "react";
-
-
-export default function Signin() {
+export default function Login() {
   const [email, setEmail] = useState("");
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
+
   const [password, setPassword] = useState("");
-  // const [pasem, setPasem] = useState([])
-  const [flag, setFlag] = useState(false);
-  //   const [login, setLogin] = useState(true)
 
-  const handleSub = (event) => {
-    event.preventDefault();
-    // console.log(formData);
-    if (!email || !password) {
-      setFlag(true);
-    } else {
-      setFlag(false);
-      // const userEnt = {...setPasem, [name] : value }
-      localStorage.setItem("myLocalStorageEmail", JSON.stringify(email));
-      localStorage.setItem("myLocalStoragePassword", JSON.stringify(password));
-    }
+  const handleSub = () => {
+    console.log("yo");
   };
-
-  //////////////////////////////////
 
   return (
     <>
       <NavbarForsignLog />
 
       <form className="input-field" onSubmit={handleSub}>
-        <Heading fontSize="30px">Create an account</Heading>
+        <Heading fontSize="30px">Sign in</Heading>
         <Stack spacing={3} mt="20px">
           <Input
             placeholder="Email address"
@@ -45,24 +28,7 @@ export default function Signin() {
             onChange={(e) => setEmail(e.target.value)}
             name="email"
           />
-          <Input
-            placeholder="First name"
-            size="md"
-            width="100%"
-            type="text"
-            value={fname}
-            onChange={(e) => setFname(e.target.value)}
-            name="fname"
-          />
-          <Input
-            placeholder="Surname"
-            size="md"
-            width="100%"
-            type="text"
-            value={lname}
-            onChange={(e) => setLname(e.target.value)}
-            name="lname"
-          />
+
           <Input
             placeholder="Password"
             size="md"
@@ -80,12 +46,6 @@ export default function Signin() {
           Selecting this checkbox will keep you signed into your account on this
           device until you sign out. Do not select this on shared devices.
         </Text>
-        <Checkbox mt="6" defaultChecked>
-          <Text fontSize="14px">
-            I'd like to receive travel deals, special offers and other
-            information from Expedia via email.
-          </Text>
-        </Checkbox>
 
         <Text fontSize="14px" mt="6">
           By creating an account, I agree to the Expedia Terms and Conditions,
@@ -117,7 +77,6 @@ export default function Signin() {
             alt=""
           />
         </Wrap>
-        
       </form>
     </>
   );
