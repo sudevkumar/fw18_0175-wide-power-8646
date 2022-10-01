@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#image_world {
+  height: 17px;
+  margin-right: 3px;
+}
+
+#bell_icons{
+    height: 17px;
+}
