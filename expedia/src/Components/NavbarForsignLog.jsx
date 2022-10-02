@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./navbarForSignLog.css";
 
 export default function NavbarForsignLog() {
@@ -5,7 +6,9 @@ export default function NavbarForsignLog() {
     <>
       <div className="nav-bar">
         <div className="button-class">
-          <button>←</button>
+          <Link to={`/home`}>
+            <button>←</button>
+          </Link>
         </div>
 
         <div className="image-class">

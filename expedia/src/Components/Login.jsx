@@ -1,5 +1,6 @@
 import { Checkbox, Heading, Input, Stack, Text, Wrap } from "@chakra-ui/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import NavbarForsignLog from "./NavbarForsignLog";
 
@@ -8,15 +9,13 @@ export default function Login() {
 
   const [password, setPassword] = useState("");
 
-  const handleSub = () => {
-    console.log("yo");
-  };
+
 
   return (
     <>
       <NavbarForsignLog />
 
-      <form className="input-field" onSubmit={handleSub}>
+      <form className="input-field">
         <Heading fontSize="30px">Sign in</Heading>
         <Stack spacing={3} mt="20px">
           <Input
@@ -51,7 +50,7 @@ export default function Login() {
           By creating an account, I agree to the Expedia Terms and Conditions,
           Privacy Statement and Expedia Rewards Terms and Conditions.
         </Text>
-        <Input type="submit" bgColor="blue.600" color="white" mt="8" />
+        <Link to={`/home`}><Input type="submit" bgColor="blue.600" color="white" mt="8" /></Link>
         <Text fontSize="12" justifyContent="center" display="flex" mt="6">
           Already have an account? Sign in
         </Text>
