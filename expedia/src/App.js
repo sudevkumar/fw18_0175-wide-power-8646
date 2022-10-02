@@ -7,6 +7,7 @@ import AllRouters from "./Components/AllRouters";
 
 function App() {
   return <AllRouters />;
+  // return <Home />
 }
 
 export default App;

@@ -82,6 +82,7 @@ export default function MainNavbar() {
             cursor="pointer"
           >
             <Link to={`/signin`}>Signin</Link>
+            {/* GJGJg */}
           </Text>
 
           <Text
