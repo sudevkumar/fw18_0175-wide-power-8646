@@ -3,28 +3,18 @@ import { Heading, Input, Stack, Checkbox, Text, Wrap } from "@chakra-ui/react";
 import NavbarForsignLog from "./NavbarForsignLog";
 
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [password, setPassword] = useState("");
-  // const [pasem, setPasem] = useState([])
-  const [flag, setFlag] = useState(false);
-  //   const [login, setLogin] = useState(true)
 
   const handleSub = (event) => {
     event.preventDefault();
-    // console.log(formData);
-    if (!email || !password) {
-      setFlag(true);
-    } else {
-      setFlag(false);
-      // const userEnt = {...setPasem, [name] : value }
-      localStorage.setItem("myLocalStorageEmail", JSON.stringify(email));
-      localStorage.setItem("myLocalStoragePassword", JSON.stringify(password));
-    }
+
+    return <Link to={`/home`}></Link>;
   };
 
   //////////////////////////////////
@@ -91,7 +81,15 @@ export default function Signin() {
           By creating an account, I agree to the Expedia Terms and Conditions,
           Privacy Statement and Expedia Rewards Terms and Conditions.
         </Text>
-        <Input type="submit" bgColor="blue.600" color="white" mt="8" />
+        <Link to={`/home`}>
+          <Input
+            type="submit"
+            bgColor="blue.600"
+            color="white"
+            mt="8"
+            // onClick={handleClick}
+          />
+        </Link>
         <Text fontSize="12" justifyContent="center" display="flex" mt="6">
           Already have an account? Sign in
         </Text>
@@ -117,7 +115,6 @@ export default function Signin() {
             alt=""
           />
         </Wrap>
-        
       </form>
     </>
   );

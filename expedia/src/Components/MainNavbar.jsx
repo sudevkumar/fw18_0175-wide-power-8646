@@ -1,4 +1,5 @@
 import { Box, Flex, Select, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import "./MainNavbar.css";
 
 export default function MainNavbar() {
@@ -15,7 +16,15 @@ export default function MainNavbar() {
             src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2"
             alt=""
           />
-          <Select placeholder="More Travell" border="none" marginLeft="10px">
+          <Select
+            placeholder="More Travell"
+            border="none"
+            marginLeft="10px"
+            fontSize="13px"
+            fontWeight="bold"
+            cursor="pointer"
+            _hover={{ color: "blue" }}
+          >
             <option value="option1">Stay</option>
             <option value="option2"> Flights</option>
             <option value="option3"> Cars</option>
@@ -35,6 +44,7 @@ export default function MainNavbar() {
             alignItems="center"
             fontSize="14px"
             fontWeight="600"
+            cursor="pointer"
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Globe_icon_2.svg/2048px-Globe_icon_2.svg.png"
@@ -48,6 +58,7 @@ export default function MainNavbar() {
             _hover={{ color: "blue" }}
             fontSize="14px"
             fontWeight="600"
+            cursor="pointer"
           >
             Support
           </Text>
@@ -68,8 +79,19 @@ export default function MainNavbar() {
             _hover={{ color: "blue" }}
             fontSize="14px"
             fontWeight="600"
+            cursor="pointer"
           >
-            Sign in
+            <Link to={`/signin`}>Signin</Link>
+          </Text>
+
+          <Text
+            display="flex"
+            _hover={{ color: "blue" }}
+            fontSize="14px"
+            fontWeight="600"
+            cursor="pointer"
+          >
+            <Link to={`/login`}>Login</Link>
           </Text>
         </Box>
       </Flex>

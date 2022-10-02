@@ -7,9 +7,11 @@ import {
   Tab,
   TabList,
   Tabs,
+  Text,
 } from "@chakra-ui/react";
 
 import MainNavbar from "./MainNavbar";
+import Footers from "./Footers";
 import "./Home.css";
 
 export default function Home() {
@@ -45,10 +47,10 @@ export default function Home() {
         >
           <Tabs>
             <TabList>
-              <Tab>Stays</Tab>
-              <Tab>Flights</Tab>
-              <Tab>Packages</Tab>
-              <Tab>Things to do</Tab>
+              <Tab fontWeight="bold" fontSize="13px">Stays</Tab>
+              <Tab fontWeight="bold" fontSize="13px">Flights</Tab>
+              <Tab fontWeight="bold" fontSize="13px">Packages</Tab>
+              <Tab fontWeight="bold" fontSize="13px">Things to do</Tab>
             </TabList>
           </Tabs>
         </Box>
@@ -115,23 +117,94 @@ export default function Home() {
 
         {/* Button */}
         <Box width="95%" m="auto" mt="10px">
-          <button id="search-btn">
-            Search
-          </button>
+          <button id="search-btn">Search</button>
         </Box>
       </Box>
 
-    {/* ///////////////////// */}
+      {/* ///////////////////// */}
 
+      <div className="pictures">
+        <div id="pictures">
+          <Text
+            color="white"
+            fontWeight="bold"
+            fontSize="40px"
+            p="90px 0px 0px 40px"
+          >
+            Save instantly with
+          </Text>
+          <Text
+            color="white"
+            fontWeight="bold"
+            fontSize="40px"
+            p="0px 0px 0px 40px"
+            mt="-20px"
+          >
+            Expedia Rewards
+          </Text>
+          <Text color="white" p="0px 0px 0px 40px">
+            You can enjoy access to perks like Member Prices, <br /> saving an
+            average of 15% on thousands of hotels. <br /> Terms may apply.
+          </Text>
+          <button id="mem-price">See Member Price</button>
+        </div>
+      </div>
 
-    <Box width="90%" margin="auto" mt="70px">
-      <img src="https://a.travel-assets.com/travel-assets-manager/cmct-5255/POSa-HP-Hero-D-928x398.jpg" alt="" id="rewards"/>
-    </Box>
+      <Box display="flex" height="auto" width="90%" m="auto" mt="40px">
+        <Box height="210px" width="55%">
+          <img
+            id="beach-img"
+            src="https://img.freepik.com/premium-photo/beautiful-tropical-beaches-sea-with-blue-background-beach-bright-blue-sky-background-copying-space-panorama_524876-608.jpg?w=2000"
+          />
+        </Box>
 
+        <Box
+          height="210px"
+          width="55%"
+          borderTop="1px solid lightGray"
+          borderRight="1px solid lightGray"
+          borderBottom="1px solid lightGray"
+          borderRadius="5px"
+        >
+          <img
+            id="usa"
+            src="https://tpc.googlesyndication.com/simgad/5197503855605148686?"
+            alt=""
+          />
+          <Text margin="10px 0px 0px 20px" fontSize="20px" fontWeight="500">
+            Discover USA
+          </Text>
+          <Text margin="10px 0px 0px 20px" fontSize="14px">
+            From beaches and national parks to iconic big cities, the USA awaits
+            you.
+          </Text>
+        </Box>
+      </Box>
 
+      <div className="plan-now">
+        <div id="plan-now-left">
+          <Text
+            textAlign="left"
+            m="177px 0px 0px 30px"
+            color="white"
+            fontWeight="bold"
+          >
+            Plan ahead and save
+          </Text>
+          <Text
+            textAlign="left"
+            m="0px 0px 0px 30px"
+            color="white"
+            fontWeight="500"
+            fontSize="13px"
+          >
+            Book 60 days in advance for 20% off select stays.
+          </Text>
+        </div>
 
-
-
+        <div id="plan-now-right"></div>
+      </div>
+      <Footers />
     </>
   );
 }
